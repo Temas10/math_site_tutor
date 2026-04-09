@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Math Mentor</title>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .blog-header {
+            background: linear-gradient(135deg, #1a2b4c 0%, #0f1a2e 100%);
+            padding: 60px 0;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .article-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .article-content {
+            padding: 25px 20px;
+        }
+        
+        .article-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .back-link:hover {
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%); padding: 15px 0;">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="/">
+                    <img src="/static/images/main-logo.png" alt="Math Mentor" style="height: 45px;">
+                </a>
+                <a href="/" class="btn btn-outline-dark">← На главную</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Заголовок блога -->
+    <section class="blog-header">
+        <div class="container">
+            <a href="/" class="back-link">← Вернуться на главную</a>
+            <h1 class="display-3 fw-bold">Блог Академии</h1>
+            <p class="fs-5">Полезные статьи о математике, подготовке к ЕГЭ и ОГЭ</p>
+        </div>
+    </section>
+
+    <!-- Список статей -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <!-- Статья 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <img src="/static/images/post-item1.jpg" alt="Ловушки ЕГЭ">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 15 марта 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>📚 5 мин чтения</span>
+                            </div>
+                            <h3 class="fs-4 mb-3">
+                                <a href="/blog/article-1" class="text-dark text-decoration-none">
+                                    Ловушки в ЕГЭ по математике: как не потерять баллы
+                                </a>
+                            </h3>
+                            <p class="text-muted">Разбираем самые частые ошибки в оформлении и вычислениях, которые стоят абитуриентам бюджета.</p>
+                            <a href="/blog/article-1" class="btn btn-outline-primary mt-2">Читать →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Статья 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <img src="/static/images/post-item2.jpg" alt="План ОГЭ">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 10 марта 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>📚 7 мин чтения</span>
+                            </div>
+                            <h3 class="fs-4 mb-3">
+                                <a href="/blog/article-2" class="text-dark text-decoration-none">
+                                    Как подготовиться к ОГЭ за 3 месяца: план действий
+                                </a>
+                            </h3>
+                            <p class="text-muted">Реалистичный план подготовки для тех, кто проснулся в марте и понял, что экзамен уже скоро.</p>
+                            <a href="/blog/article-2" class="btn btn-outline-primary mt-2">Читать →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Статья 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <img src="/static/images/post-item3.jpg" alt="Зачем нужна математика">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 5 марта 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>📚 6 мин чтения</span>
+                            </div>
+                            <h3 class="fs-4 mb-3">
+                                <a href="/blog/article-3" class="text-dark text-decoration-none">
+                                    Зачем нужна высшая математика в жизни? Разрушаем мифы
+                                </a>
+                            </h3>
+                            <p class="text-muted">Интегралы и производные кажутся бесполезными? Рассказываю, где они реально применяются.</p>
+                            <a href="/blog/article-3" class="btn btn-outline-primary mt-2">Читать →</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer style="background: #0b1a2a; color: white; padding: 40px 0; margin-top: 50px;">
+        <div class="container">
+            <div class="text-center">
+                <p>© 2025 Академия Математики. Все права защищены.</p>
+                <p>
+                    <a href="/" style="color: rgba(255,255,255,0.7);">Главная</a> |
+                    <a href="/blog" style="color: rgba(255,255,255,0.7);">Блог</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

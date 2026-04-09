@@ -1,0 +1,1335 @@
+/*
+Theme Name: Math Mentor - Репетитор по математике
+Description: Адаптированный шаблон для репетитора ЕГЭ/ОГЭ
+Version: 2.0
+*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #1a2b4c;
+  --bs-gray-100: #f3f6f9;
+  --bs-gray-200: #e7eaee;
+  --bs-primary: #0077b6;
+  --bs-secondary: #e9f0f9;
+  --bs-primary-rgb: 0, 119, 182;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-light: #fff;
+  --bs-dark: #0b1a2a;
+  --bs-dark-rgb: 11, 26, 42;
+  --navbar-color-color: #131814;
+  --swiper-theme-color: #0077b6 !important;
+  --swiper-pagination-color: #0077b6 !important;
+  --header-bg: #f8faff;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --header-height: 100px;
+    --header-height-min: 80px;
+  }
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
+/*----------------------------------------------*/
+/* 1 GENERAL TYPOGRAPHY */
+/*----------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+ul.inner-list li {
+  font-size: 1.2em;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: var(--bs-dark);
+  text-decoration: none;
+  transition: 0.3s color ease-out;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--bs-primary);
+}
+
+.form-control:focus,
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--bs-primary);
+}
+
+/*------------ Background Color -----------*/
+.bg-secondary {
+  background: var(--bs-secondary) !important;
+}
+
+.bg-dark {
+  background: var(--bs-dark) !important;
+}
+
+.bg-light {
+  background: var(--bs-light) !important;
+}
+
+.bg-gray-1 {
+  background-color: var(--bs-gray-100) !important;
+}
+
+/* - Section Padding (УМЕНЬШЕННЫЕ) ----------------------------- */
+.padding-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-medium {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.padding-large {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+/* - Section margin ------------------------------------------------- */
+.margin-small {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margin-medium {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.margin-large {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+/* - Section Title ------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+}
+
+/* - Section width ------------------------------------------------- */
+.container-fluid {
+  max-width: 1540px;
+}
+
+/*--------------------------------------------------------------
+/** 2.0 Buttons
+--------------------------------------------------------------*/
+.btn.btn-small {
+  padding: 0.8em 1.8em;
+  font-size: 0.65em;
+}
+
+.btn.btn-medium {
+  padding: 1.1em 2.8em;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+
+.btn.btn-large {
+  padding: 2.4em 5.1em;
+  font-size: 1.8em;
+}
+
+.btn.btn-rounded,
+.btn.btn-rounded::after {
+  border-radius: 6px;
+}
+
+.btn.btn-pill,
+.btn.btn-pill::after {
+  border-radius: 2em;
+}
+
+.btn.btn-outline-dark,
+.btn.btn-outline-light,
+.btn.btn-outline-accent {
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  border: 1px solid;
+}
+
+.btn.btn-outline-dark:hover::after,
+.btn.btn-outline-light:hover::after {
+  background-color: transparent;
+}
+
+.btn.btn-outline-dark {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn.btn-outline-dark:hover {
+  background: var(--bs-primary);
+  color: var(--bs-light);
+  border-color: var(--bs-primary);
+}
+
+.btn.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--bs-light);
+}
+
+.btn.btn-outline-light:hover {
+  background: var(--bs-primary);
+  color: var(--bs-light);
+  border-color: var(--bs-primary);
+}
+
+.btn.btn-outline-gray {
+  background: transparent;
+  border-color: var(--gray-color-600);
+  color: var(--bs-dark);
+}
+
+.btn.btn-outline-gray:hover {
+  border-color: var(--bs-dark);
+  color: var(--bs-dark) !important;
+}
+
+.btn.btn-outline-accent {
+  background: transparent;
+  border-color: var(--accent-color);
+  color: var(--bs-dark);
+}
+
+.btn.btn-outline-accent:hover {
+  border-color: var(--bs-dark);
+  color: var(--bs-dark) !important;
+}
+
+.btn.btn-full {
+  display: block;
+  margin: .85em 0;
+  width: 100%;
+  letter-spacing: 0.12em;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn-rounded-none,
+.btn-rounded-none::after {
+  border-radius: 0;
+}
+
+.btn.btn-normal {
+  border: none;
+  color: var(--bs-dark);
+  text-decoration: underline;
+}
+
+.btn.btn-normal:hover {
+  text-decoration: none;
+}
+
+.btn.btn-accent {
+  color: var(--bs-light);
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.btn.btn-accent:hover {
+  color: var(--bs-light) !important;
+  background-color: var(--bs-primary);
+}
+
+.btn.btn-black {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  border: none;
+}
+
+.btn.btn-black:hover {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+}
+
+.btn.btn-light {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+  border: none;
+}
+
+.btn.btn-light:hover {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+}
+
+.btn.btn-primary {
+  background: var(--bs-primary);
+  color: var(--bs-light);
+  border: none;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+
+.btn-left {
+  text-align: left;
+  display: block;
+}
+
+.btn-center {
+  text-align: center;
+  display: block;
+}
+
+.btn-right {
+  text-align: right;
+  display: block;
+}
+
+/*----------------------------------------------*/
+/* 3 PRELOADER */
+/*----------------------------------------------*/
+#preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: #e9f0f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border: 9px solid var(--bs-primary);
+  border-style: dotted;
+  border-radius: 300px;
+  animation: loader 9s infinite ease;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--- Image hover Effects ----------------------- */
+.image-zoom-effect {
+  overflow: hidden;
+}
+
+.image-zoom-effect .image-holder {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-zoom-effect:hover .image-holder {
+  transform: scale(0.95);
+}
+
+.image-zoom-effect img {
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.image-zoom-effect:hover img {
+  transform: scale(1.05);
+}
+
+/* Link Effect ----------------------- */
+.link-effect {
+  cursor: pointer;
+}
+
+.link-effect a {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.5s;
+  display: block;
+}
+
+.link-effect a::after {
+  content: attr(data-after);
+  display: inline-block;
+  transform: translateY(100%);
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  text-align: inherit;
+  text-transform: uppercase;
+  transition: inherit;
+}
+
+.link-effect a>span {
+  display: inline-block;
+  transform: translateY(0%);
+  transition: inherit;
+}
+
+.link-effect:hover a>span {
+  transform: translateY(-100%);
+}
+
+.link-effect:hover a::after {
+  transform: translateY(0%);
+}
+
+/* - Button Arrow Effects ----------------------- */
+.btn.btn-arrow {
+  color: var(--bs-light);
+  background-color: var(--bs-primary);
+  border-radius: 260px;
+}
+
+.btn.btn-arrow.btn-bg-light {
+  color: var(--bs-dark);
+  background-color: var(--bs-light);
+}
+
+.btn.btn-arrow.outline-dark {
+  color: var(--bs-dark);
+  background-color: transparent;
+  border: 1px solid var(--bs-dark);
+}
+
+.btn.btn-arrow.btn-normal {
+  color: var(--bs-dark);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.btn.btn-arrow span {
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.btn.btn-arrow:hover span {
+  transform: translate3d(-7px, 0, 0);
+}
+
+.btn.btn-arrow svg {
+  position: absolute;
+  top: 37px;
+  right: 30px;
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+}
+
+.btn.btn-arrow:hover svg {
+  opacity: 0;
+  right: 0;
+}
+
+.btn svg.icon-arrow {
+  width: 25px;
+  height: 25px;
+}
+
+/* - Search Bar (СКРЫТ) ----------------------- */
+.search-box {
+  display: none !important;
+}
+
+.user-items .search-item {
+  display: none !important;
+}
+
+/*----------------------------------------------*/
+/* 4 HEADER (СВЕТЛАЯ ОБОЛОЧКА) */
+/*----------------------------------------------*/
+.site-header {
+  z-index: 100;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+}
+
+.navbar-nav .nav-item a.nav-link {
+  color: var(--accent-color) !important;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item a.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--bs-primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item a.nav-link:hover::after,
+.navbar-nav .nav-item a.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-item a.nav-link:hover,
+.navbar-nav .nav-item a.nav-link.active {
+  color: var(--bs-primary) !important;
+}
+
+/* Кнопка ЗАПИСАТЬСЯ */
+.navbar-nav .nav-item:last-child a.nav-link {
+  background: var(--bs-primary);
+  padding: 10px 25px !important;
+  border-radius: 50px;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.25);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item:last-child a.nav-link::after {
+  display: none;
+}
+
+.navbar-nav .nav-item:last-child a.nav-link:hover {
+  background: var(--bs-dark);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.35);
+}
+
+/* Логотип в шапке */
+.site-header .navbar-brand img {
+  height: 45px;
+  /* Убираем инверсию, чтобы логотип был виден */
+  filter: none;
+}
+
+/* Кнопка бургер-меню */
+.navbar-toggler svg {
+  color: var(--accent-color) !important;
+}
+
+.dropdown-menu {
+  background: white;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: var(--accent-color);
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--bs-primary);
+  color: white;
+}
+
+/*------------ Offcanvas -------------- */
+#header-nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#header-nav .offcanvas.show {
+  z-index: 9999;
+  background: white;
+}
+
+#header-nav .offcanvas-end {
+  width: 500px;
+}
+
+.offcanvas.show .nav-item a.nav-link {
+  font-size: 1.8em;
+  color: var(--accent-color) !important;
+}
+
+.offcanvas.show .offcanvas-body .navbar-nav {
+  align-items: unset !important;
+  padding-left: 20px;
+}
+
+.offcanvas-header .btn-close {
+  filter: none;
+}
+
+.offcanvas-header .navbar-brand img {
+  filter: none;
+}
+
+/*------------ Top User Icons -----------*/
+.site-header .user-items svg {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+@media only screen and (max-width: 991px) {
+  #navbar .user-items {
+    display: none;
+  }
+  
+  .navbar-nav .nav-item:last-child a.nav-link {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+/*----------------------------------------------*/
+/* 5 BILLBOARD */
+/*----------------------------------------------*/
+.banner-content p {
+  width: 100%;
+}
+
+#billboard .swiper-pagination {
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-align: center;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  cursor: pointer;
+  border-color: transparent;
+  transition: border-color 0.3s ease-out;
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination .swiper-pagination-bullet::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: -2px;
+  left: -2px;
+  border-radius: 50px;
+  border: 2px solid white;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active::after {
+  transform: scale(1);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 12px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  #billboard .banner-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: auto;
+  }
+
+  .banner-content h1.display-1 {
+    font-size: 4.5em;
+  }
+
+  .banner-content p {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-content h1.display-1 {
+    font-size: 3.5em;
+  }
+}
+
+/*----------------------------------------------*/
+/* 6 ICON BOX */
+/*----------------------------------------------*/
+.icon-box .icon-box-icon svg {
+  width: 50px;
+  height: 50px;
+  color: var(--bs-primary);
+}
+
+.icon-box .icon-box-content {
+  width: auto;
+}
+
+.icon-box-content h3.card-title {
+  font-size: 1.2em;
+}
+
+/*----------------------------------------------*/
+/* 7 BANNER (Программы - ОКОШКИ ВНУТРИ КАРТИНКИ) */
+/*----------------------------------------------*/
+#banner {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#banner .row {
+  gap: 30px !important;
+  justify-content: center;
+}
+
+.program-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  height: 450px;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.program-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.program-card:hover img {
+  transform: scale(1.1);
+}
+
+.program-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 25px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.program-card:hover .program-overlay {
+  background: rgba(255, 255, 255, 0.98);
+  bottom: 35px;
+}
+
+.program-overlay h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--bs-dark);
+}
+
+.program-overlay p {
+  font-size: 1.1rem;
+  color: var(--bs-primary);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.program-overlay .btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+}
+
+/*----------------------------------------------*/
+/* 8 ABOUT US (С ТЁМНЫМ ФОНОМ - ИСПРАВЛЕНО) */
+/*----------------------------------------------*/
+#about-us {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  background: linear-gradient(135deg, #0f1a2e 0%, #1a2b4c 100%);
+  position: relative;
+  overflow: hidden;
+  /* Убираем конфликт z-index */
+  z-index: 1;
+}
+
+#about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.06"><text x="20" y="40" font-size="60" fill="white" font-family="Arial">∑</text><text x="130" y="90" font-size="70" fill="white" font-family="Arial">∫</text><text x="40" y="160" font-size="50" fill="white" font-family="Arial">π</text><text x="160" y="170" font-size="65" fill="white" font-family="Arial">√</text><text x="90" y="130" font-size="45" fill="white" font-family="Arial">∞</text><text x="170" y="40" font-size="40" fill="white" font-family="Arial">Δ</text></svg>');
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Контент должен быть поверх фона */
+#about-us .container {
+  position: relative;
+  z-index: 3;
+}
+
+#about-us .about-text {
+  position: relative;
+  z-index: 3;
+}
+
+#about-us .about-image {
+  position: relative;
+  z-index: 3;
+}
+
+#about-us .about-text h2 {
+  color: white !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#about-us .about-text p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#about-us .about-text strong {
+  color: white;
+}
+
+#about-us .btn-primary {
+  background: white;
+  color: var(--bs-dark);
+  border: none;
+}
+
+#about-us .btn-primary:hover {
+  background: var(--bs-primary);
+  color: white;
+}
+
+#about-us .btn-primary svg {
+  color: var(--bs-dark);
+}
+
+#about-us .btn-primary:hover svg {
+  color: white;
+}
+
+#about-us .about-image img {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 3;
+}
+
+#about-us .about-image p {
+  color: rgba(255, 255, 255, 0.7) !important;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  #about-us .about-image {
+    text-align: center !important;
+    margin-top: 40px;
+  }
+
+  #about-us .about-text {
+    text-align: center;
+    padding-right: 0 !important;
+  }
+}
+
+#about-us .about-image img {
+  transition: transform 0.3s ease;
+}
+
+#about-us .about-image img:hover {
+  transform: scale(1.02);
+}
+
+/*----------------------------------------------*/
+/* 9 PRODUCT STORE (Программы) */
+/*----------------------------------------------*/
+#featured-products {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-store .swiper-horizontal>.swiper-pagination-bullets,
+.product-store .swiper-pagination-bullets.swiper-pagination-horizontal,
+.product-store .swiper-pagination-custom,
+.product-store .swiper-pagination-fraction {
+  position: relative !important;
+  margin-top: 30px;
+}
+
+.product-swiper .swiper-slide {
+  padding: 10px 15px !important;
+}
+
+.product-card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-card .cart-concern {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background: white;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.image-holder {
+  overflow: hidden;
+}
+
+.image-holder img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .image-holder img {
+  transform: scale(1.08);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-title a {
+  color: var(--bs-dark);
+  transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+  color: var(--bs-primary);
+}
+
+.cart-info a {
+  font-size: 1.2rem;
+  color: var(--bs-primary);
+}
+
+/*----------------------------------------------*/
+/* 10 TESTIMONIALS (ОТЗЫВЫ С ФОНОМ) */
+/*----------------------------------------------*/
+#testimonials {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf2 100%);
+  position: relative;
+}
+
+#testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><text x="10" y="30" font-size="40" fill="%230077b6" font-family="Arial">∑</text><text x="60" y="70" font-size="50" fill="%230077b6" font-family="Arial">∫</text><text x="30" y="80" font-size="30" fill="%230077b6" font-family="Arial">π</text><text x="80" y="20" font-size="35" fill="%230077b6" font-family="Arial">√</text></svg>');
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+.review-item {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.review-item blockquote {
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--bs-dark);
+}
+
+.review-content .swiper-arrow {
+  top: 50%;
+  bottom: 0;
+  z-index: 2;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: var(--bs-dark);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: 0.4s ease-in-out;
+}
+
+.review-content .swiper-arrow:hover {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.review-content .swiper-arrow:hover svg {
+  color: white;
+}
+
+.review-content .swiper-arrow.swiper-arrow-prev {
+  left: -60px;
+}
+
+.review-content .swiper-arrow.swiper-arrow-next {
+  right: -60px;
+}
+
+.review-content .quotation svg.quote {
+  color: var(--bs-primary);
+  opacity: 0.3;
+}
+
+#testimonials .swiper-pagination {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  .review-content .swiper-arrow {
+    display: none !important;
+  }
+}
+
+/*----------------------------------------------*/
+/* 11 BLOG */
+/*----------------------------------------------*/
+#latest-blog {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-item {
+  margin-bottom: 30px;
+}
+
+.card-image {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.post-image {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-item:hover .post-image {
+  transform: scale(1.05);
+}
+
+.pagination .page-link {
+  color: var(--bs-primary);
+  background-color: var(--bs-light);
+  border: 1px solid var(--bs-primary);
+}
+
+.pagination .page-item.active .page-link {
+  color: var(--bs-light);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/*----------------------------------------------*/
+/* 12 SUBSCRIBE (С ФОНОМ) */
+/*----------------------------------------------*/
+.subscribe {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  background: linear-gradient(135deg, #1a2b4c 0%, #0f1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.06"><text x="20" y="40" font-size="60" fill="white" font-family="Arial">∑</text><text x="130" y="90" font-size="70" fill="white" font-family="Arial">∫</text><text x="40" y="160" font-size="50" fill="white" font-family="Arial">π</text><text x="160" y="170" font-size="65" fill="white" font-family="Arial">√</text></svg>');
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+.subscribe .subscribe-content {
+  position: relative;
+  z-index: 2;
+}
+
+.subscribe .subscribe-header h2 {
+  color: white !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe .subscribe-header p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.subscribe form input {
+  height: 60px;
+  border-radius: 50px !important;
+  border: none;
+  padding-left: 25px !important;
+  font-size: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe form input:focus {
+  outline: none;
+  box-shadow: 0 5px 25px rgba(0, 119, 182, 0.3);
+}
+
+.subscribe .btn-black {
+  background-color: var(--bs-primary) !important;
+  border-radius: 50px !important;
+  height: 60px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.subscribe .btn-black:hover {
+  background-color: white !important;
+  color: var(--bs-primary) !important;
+  transform: translateY(-2px);
+}
+
+/*----------------------------------------------*/
+/* 13 FOOTER */
+/*----------------------------------------------*/
+#footer {
+  padding-top: 60px !important;
+  margin-top: 30px;
+  background: var(--bs-dark);
+}
+
+#footer,
+#footer p,
+#footer a,
+#footer h5 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#footer h5 {
+  color: white;
+  font-weight: 600;
+}
+
+#footer a:hover {
+  color: white;
+}
+
+#footer .bg-gray {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+#footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/*----------------------------------------------*/
+/* 14 ОТСТУПЫ МЕЖДУ СЕКЦИЯМИ */
+/*----------------------------------------------*/
+section {
+  position: relative;
+  overflow: visible !important;
+}
+
+#billboard {
+  margin-bottom: 0;
+}
+
+#company-services {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.display-header {
+  margin-bottom: 30px !important;
+}
+
+.display-2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+/*----------------------------------------------*/
+/* 15 BANNER CONTENT (Улучшения) */
+/*----------------------------------------------*/
+.banner-content {
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 50px 40px !important;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  margin: 0 60px;
+}
+
+/*----------------------------------------------*/
+/* 16 АДАПТИВНОСТЬ */
+/*----------------------------------------------*/
+@media (max-width: 768px) {
+  .padding-large {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .display-2 {
+    font-size: 2.2rem;
+  }
+
+  #testimonials {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .banner-content {
+    margin: 0 20px;
+    padding: 30px 25px !important;
+  }
+
+  .image-holder img {
+    height: 250px;
+  }
+  
+  .program-card {
+    height: 400px;
+  }
+  
+  .program-overlay {
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    padding: 20px 15px;
+  }
+  
+  .program-overlay h3 {
+    font-size: 1.5rem;
+  }
+}
+/* Убираем все стрелочки с кнопок */
+.btn svg.arrow-right,
+.btn svg[class*="arrow"],
+.btn .arrow-right {
+  display: none !important;
+}
+
+/* Убираем лишний отступ справа на кнопках */
+.btn.btn-medium,
+.btn.btn-primary,
+.btn.btn-outline-dark,
+.btn.btn-black {
+  padding-right: 2.8em !important;
+}
+
+/* Возвращаем стрелочки только для навигации слайдера */
+.swiper-arrow svg,
+.review-content .swiper-arrow svg {
+  display: flex !important;
+  position: static !important;
+}
+
+/* Для кнопок с классом btn-arrow убираем абсолютное позиционирование */
+.btn.btn-arrow {
+  padding-right: 2.8em !important;
+}
+
+.btn.btn-arrow span {
+  padding-right: 0 !important;
+}
+
+.nav-item.dropdown .nav-link.dropdown-toggle::after {
+  display: none !important;
+}

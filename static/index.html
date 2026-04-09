@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Академия Математики</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="templatesjungle">
+  <meta name="keywords" content="репетитор математика егэ огэ подготовка онлайн">
+  <meta name="description" content="Профессиональный репетитор по математике. Подготовка к ЕГЭ и ОГЭ на высокий балл.">
+
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%"
+  data-bs-smooth-scroll="true" tabindex="0">
+  
+  <!-- SVG Иконки -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="search" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+    </symbol>
+    <symbol id="user" viewBox="0 0 16 16">
+      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+    </symbol>
+    <symbol id="cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+    <symbol id="arrow-left" viewBox="0 0 32 32">
+      <path fill="currentColor" d="m13.281 6.781l-8.5 8.5l-.687.719l.687.719l8.5 8.5l1.438-1.438L7.938 17H28v-2H7.937l6.782-6.781z" />
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M18.719 6.781L17.28 8.22L24.063 15H4v2h20.063l-6.782 6.781l1.438 1.438l8.5-8.5l.687-.719l-.687-.719z" />
+    </symbol>
+    <symbol id="quote" viewBox="0 0 24 24">
+      <path fill="currentColor" d="m15 17l2-4h-4V6h7v7l-2 4h-3Zm-9 0l2-4H4V6h7v7l-2 4H6Z" />
+    </symbol>
+    <symbol id="navbar-icon" viewBox="0 0 16 16">
+      <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+    </symbol>
+    <symbol id="close" viewBox="0 0 16 16">
+      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+    </symbol>
+  </svg>
+
+  <div id="preloader">
+    <span class="loader"></span>
+  </div>
+
+  <!-- Header с светлой оболочкой -->
+<header id="header" class="site-header">
+  <nav id="header-nav" class="navbar navbar-expand-lg px-md-3 py-md-3 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <!-- Логотип должен быть тёмным, так как шапка светлая -->
+        <img src="/static/images/main-logo.png" class="logo" alt="Math Mentor" style="height: 45px;">
+      </a>
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="navbar-icon" width="40" height="40">
+          <use xlink:href="#navbar-icon"></use>
+        </svg>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+        <div class="offcanvas-header px-4 pb-0">
+          <a class="navbar-brand" href="index.html">
+            <img src="/static/images/main-logo.png" class="logo" alt="Math Mentor" style="height: 45px;">
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="navbar" class="navbar-nav text-capitalize justify-content-end align-items-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link me-4 active" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="#about-us">Обо мне</a>
+            </li>
+            <li class="nav-item dropdown me-4">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Программы</a>
+              <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
+                <li><a href="#" class="dropdown-item">Подготовка к ОГЭ</a></li>
+                <li><a href="#" class="dropdown-item">Подготовка к ЕГЭ (Профиль)</a></li>
+                <li><a href="#" class="dropdown-item">Подготовка к ЕГЭ (База)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="#testimonials">Отзывы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="#footer">Контакты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ЗАПИСАТЬСЯ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Billboard -->
+  <section id="billboard" class="overflow-hidden">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container-fluid px-0">
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="banner-item d-flex align-items-center"
+                  style="background-image: url('/static/images/banner-image1.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; min-height: 850px;">
+                  <div class="banner-content">
+                    <h2 class="display-2 text-capitalize text-dark pb-2">Подготовка к ЕГЭ по математике</h2>
+                    <p class="fs-5">Системный подход, авторские методики и реальные результаты.</p>
+                    <a href="#" class="btn btn-medium btn-primary position-relative mt-3">
+                      <span>Пробный урок</span>
+                      <svg class="arrow-right position-absolute" width="18" height="20">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container-fluid px-0">
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="banner-item d-flex align-items-center"
+                  style="background-image: url('/static/images/banner-image2.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; min-height: 850px;">
+                  <div class="banner-content">
+                    <h2 class="display-2 text-capitalize text-dark pb-2">ОГЭ на "Отлично"</h2>
+                    <p class="fs-5">Закроем пробелы в школьной программе, научим решать сложные задачи и побеждать стресс на экзамене.</p>
+                    <a href="#" class="btn btn-medium btn-primary position-relative mt-3">
+                      <span>Узнать программу</span>
+                      <svg class="arrow-right position-absolute" width="18" height="20">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container-fluid px-0">
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="banner-item d-flex align-items-center"
+                  style="background-image: url('/static/images/banner-image3.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; min-height: 850px;">
+                  <div class="banner-content">
+                    <h2 class="display-2 text-capitalize text-dark pb-2">Индивидуальный подход</h2>
+                    <p class="fs-5">Каждый ученик уникален. Я подбираю программу, учитывая ваш текущий уровень и цели.</p>
+                    <a href="#" class="btn btn-medium btn-primary position-relative mt-3">
+                      <span>Записаться</span>
+                      <svg class="arrow-right position-absolute" width="18" height="20">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Программы (окошки внутри картинок) -->
+  <section id="banner" class="padding-medium">
+    <div class="container-fluid">
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="/static/images/product-large-2.jpg" alt="Подготовка к ОГЭ">
+            <div class="program-overlay">
+              <h3>Подготовка к ОГЭ</h3>
+              <p>8-9 классы</p>
+              <a href="#" class="btn btn-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="/static/images/product-large-3.jpg" alt="Подготовка к ЕГЭ">
+            <div class="program-overlay">
+              <h3>Подготовка к ЕГЭ</h3>
+              <p>10-11 классы</p>
+              <a href="#" class="btn btn-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="/static/images/product-large-4.jpg" alt="Онлайн занятия">
+            <div class="program-overlay">
+              <h3>Онлайн занятия</h3>
+              <p>Индивидуально и в группах</p>
+              <a href="#" class="btn btn-primary">Расписание</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about-us" class="padding-large">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <div class="col-lg-6 col-md-12">
+          <div class="about-text pe-lg-4">
+            <h2 class="display-2 text-capitalize pb-3">Обо мне</h2>
+            <p class="fs-5 pb-3">
+              Меня зовут <strong>Гурьянов Артём</strong>. Я профессиональный репетитор 
+              по математике с многолетним стажем. Высшее математическое образование.
+            </p>
+            <p class="fs-5 pb-3">
+              Моя цель — не просто "натаскать" на тесты, а научить думать и понимать 
+              суть предмета. Мои ученики начинают любить математику и решают задачи без проблем.
+            </p>
+            <p class="fs-5 pb-4">
+              ✅ Средний балл ЕГЭ моих учеников — 84<br>
+              ✅ ОГЭ на "4" и "5" сдают 90% учеников<br>
+              ✅ Индивидуальный план для каждого
+            </p>
+            <a href="#" class="btn btn-medium btn-primary position-relative mt-2">
+              <span>Записаться на пробный урок</span>
+              <svg class="arrow-right position-absolute" width="18" height="20">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12">
+          <div class="about-image text-center text-lg-end">
+            <img src="/static/images/about-photo.jpg" 
+                 alt="Гурьянов Артём - репетитор по математике" 
+                 class="img-fluid"
+                 style="max-width: 450px; width: 100%; border-radius: 20px;">
+            <p class="mt-3 fst-italic">Гурьянов Артём, основатель Академии Математики</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Программы (слайдер) -->
+  <section id="featured-products" class="product-store position-relative padding-medium">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="display-header pb-3 d-md-flex justify-content-between align-items-center flex-wrap col-md-12">
+          <h2 class="display-2 text-dark text-capitalize">Мои программы</h2>
+          <a href="#" class="btn btn-medium btn-outline-dark position-relative">
+            <span>Все программы</span>
+            <svg class="arrow-right position-absolute" width="18" height="20">
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div id="featured-swiper" class="product-swiper col-md-12">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="image-holder">
+                    <img src="/static/images/product-item1.jpg" alt="Тариф Базовый">
+                  </div>
+                  <div class="cart-concern">
+                    <h3 class="card-title"><a href="#">Тариф "Базовый"</a></h3>
+                    <div class="cart-info">
+                      <a class="pseudo-text-effect fw-bold" href="#" data-after="ЗАПИСАТЬСЯ">
+                        <span>от 900 ₽ / занятие</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="image-holder">
+                    <img src="/static/images/product-item2.jpg" alt="Тариф Интенсив">
+                  </div>
+                  <div class="cart-concern">
+                    <h3 class="card-title"><a href="#">Тариф "Интенсив"</a></h3>
+                    <div class="cart-info">
+                      <a class="pseudo-text-effect fw-bold" href="#" data-after="ЗАПИСАТЬСЯ">
+                        <span>от 1200 ₽ / занятие</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="image-holder">
+                    <img src="/static/images/product-item3.jpg" alt="Групповые занятия">
+                  </div>
+                  <div class="cart-concern">
+                    <h3 class="card-title"><a href="#">Групповые занятия</a></h3>
+                    <div class="cart-info">
+                      <a class="pseudo-text-effect fw-bold" href="#" data-after="ЗАПИСАТЬСЯ">
+                        <span>от 800 ₽ / занятие</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="image-holder">
+                    <img src="/static/images/product-item4.jpg" alt="Консультация">
+                  </div>
+                  <div class="cart-concern">
+                    <h3 class="card-title"><a href="#">Консультация</a></h3>
+                    <div class="cart-info">
+                      <a class="pseudo-text-effect fw-bold" href="#" data-after="ЗАПИСАТЬСЯ">
+                        <span>800 ₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-pagination text-center mt-4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section id="testimonials" class="position-relative padding-large">
+    <div class="container">
+      
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-2 text-dark text-capitalize">Отзывы учеников</h2>
+          <p class="fs-5 text-muted">Что говорят те, кто уже достиг своих целей</p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+          <div class="review-content position-relative">
+            
+            <div class="swiper-icon swiper-arrow swiper-arrow-prev position-absolute d-flex align-items-center justify-content-center">
+              <svg class="icon-arrow" width="25" height="25">
+                <use xlink:href="#arrow-left" />
+              </svg>
+            </div>
+            
+            <div class="swiper testimonial-swiper">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                  <div class="review-item text-center">
+                    <div class="quotation mb-3">
+                      <svg class="quote" width="40" height="40">
+                        <use xlink:href="#quote" />
+                      </svg>
+                    </div>
+                    <blockquote class="fs-5 mb-4">
+                      "На занятиях приятная и дружелюбная атмосфера, с Артёмом Сергеевичем легко найти контакт. Уроки строятся на основе предпочтений ученика. Преподаватель всегда был на связи, можно было обращаться с любым вопросом :)"
+                    </blockquote>
+                    <div class="author-detail">
+                      <div class="name text-primary fw-bold fs-5">Иван Петров</div>
+                      <div class="text-muted">11 класс</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="swiper-slide">
+                  <div class="review-item text-center">
+                    <div class="quotation mb-3">
+                      <svg class="quote" width="40" height="40">
+                        <use xlink:href="#quote" />
+                      </svg>
+                    </div>
+                    <blockquote class="fs-5 mb-4">
+                      "Дочка боялась математики, но после занятий с Артёмом Сергеевичем полюбила предмет. 
+                      ОГЭ сдала на твёрдую 5. Очень рекомендую!"
+                    </blockquote>
+                    <div class="author-detail">
+                      <div class="name text-primary fw-bold fs-5">Елена Соколова</div>
+                      <div class="text-muted">мама ученицы 9 класса</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="swiper-slide">
+                  <div class="review-item text-center">
+                    <div class="quotation mb-3">
+                      <svg class="quote" width="40" height="40">
+                        <use xlink:href="#quote" />
+                      </svg>
+                    </div>
+                    <blockquote class="fs-5 mb-4">
+                      "Занимались всего 2 месяца. Результат ЕГЭ — 78 баллов. Экспресс-курс сработал на ура.
+                       Огромное спасибо!"
+                    </blockquote>
+                    <div class="author-detail">
+                      <div class="name text-primary fw-bold fs-5">Дима</div>
+                      <div class="text-muted">11 класс</div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="swiper-icon swiper-arrow swiper-arrow-next position-absolute d-flex align-items-center justify-content-center">
+              <svg class="icon-arrow" width="25" height="25">
+                <use xlink:href="#arrow-right" />
+              </svg>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-pagination text-center position-relative mt-5"></div>
+      
+    </div>
+  </section>
+
+  <!-- Блог -->
+  <section id="latest-blog" class="padding-medium">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="display-header d-md-flex flex-wrap justify-content-between align-items-center pb-3">
+                    <h2 class="display-2 text-dark text-capitalize">Полезные материалы</h2>
+                    <a href="/blog" class="btn btn-medium btn-outline-dark position-relative">
+                        <span>Все статьи</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row post-grid justify-content-center">
+            
+            <!-- Статья 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-item">
+                    <div class="card-image image-zoom-effect">
+                        <a href="/blog/article-1">
+                            <img src="/static/images/post-item1.jpg" alt="Статья" class="post-image img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="card-body p-0 mt-4">
+                        <h3 class="card-title">
+                            <a href="/blog/article-1">Ловушки в ЕГЭ по математике</a>
+                        </h3>
+                        <p>Разбираем самые частые ошибки, которые стоят баллов. 
+                            <a href="/blog/article-1" class="text-decoration-underline">
+                                <em>Читать далее</em>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Статья 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-item">
+                    <div class="card-image image-zoom-effect">
+                        <a href="/blog/article-2">
+                            <img src="/static/images/post-item2.jpg" alt="Статья" class="post-image img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="card-body p-0 mt-4">
+                        <h3 class="card-title">
+                            <a href="/blog/article-2">План подготовки к ОГЭ за 3 месяца</a>
+                        </h3>
+                        <p>Реалистичный план для тех, кто начинает в марте. 
+                            <a href="/blog/article-2" class="text-decoration-underline">
+                                <em>Читать далее</em>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Статья 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-item">
+                    <div class="card-image image-zoom-effect">
+                        <a href="/blog/article-3">
+                            <img src="/static/images/post-item3.jpg" alt="Статья" class="post-image img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="card-body p-0 mt-4">
+                        <h3 class="card-title">
+                            <a href="/blog/article-3">Зачем нужна математика в жизни</a>
+                        </h3>
+                        <p>Где применяются интегралы и производные в реальном мире. 
+                            <a href="/blog/article-3" class="text-decoration-underline">
+                                <em>Читать далее</em>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Подписка -->
+<section class="subscribe padding-large">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-7 col-md-10">
+        <div class="subscribe-content text-center">
+          <div class="subscribe-header">
+            <h2 class="display-4 fw-bold">Получите скидку 10% на первый месяц</h2>
+            <p class="fs-5 mt-3">Подпишитесь на рассылку и получайте полезные материалы</p>
+          </div>
+          
+          <!-- Форма подписки -->
+          <form id="subscribe-form" class="mt-4" onsubmit="return false;">
+            <div class="row g-3 justify-content-center">
+              <div class="col-md-8">
+                <input type="email" 
+                       id="subscribe-email" 
+                       name="email" 
+                       placeholder="Введите ваш Email" 
+                       class="w-100 bg-light border-0 ps-4 py-3 rounded-3"
+                       autocomplete="off"
+                       required>
+              </div>
+              <div class="col-md-4">
+                <button type="button" id="subscribe-btn" class="btn btn-black text-capitalize w-100 py-3">Подписаться</button>
+              </div>
+            </div>
+          </form>
+          <p class="text-white-50 mt-3 small">Мы не спамим. Только полезные материалы.</p>
+          
+          <!-- Сообщение о результате -->
+          <div id="subscribe-message" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+    'use strict';
+    
+    // Ждём полной загрузки страницы
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSubscribe);
+    } else {
+        initSubscribe();
+    }
+    
+    function initSubscribe() {
+        const emailInput = document.getElementById('subscribe-email');
+        const subscribeBtn = document.getElementById('subscribe-btn');
+        const messageDiv = document.getElementById('subscribe-message');
+        
+        if (!subscribeBtn) {
+            console.warn('Кнопка подписки не найдена');
+            return;
+        }
+        
+        // Удаляем старые обработчики (на всякий случай)
+        const oldForm = document.getElementById('subscribe-form');
+        if (oldForm) {
+            const newForm = oldForm.cloneNode(true);
+            oldForm.parentNode.replaceChild(newForm, oldForm);
+        }
+        
+        // Назначаем новый обработчик на кнопку
+        document.getElementById('subscribe-btn').addEventListener('click', async function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const email = document.getElementById('subscribe-email').value.trim();
+            const btn = this;
+            const msgDiv = document.getElementById('subscribe-message');
+            
+            // Очищаем сообщение
+            msgDiv.innerHTML = '';
+            msgDiv.style.display = 'none';
+            
+            // Валидация
+            if (!email) {
+                showMessage(msgDiv, 'Пожалуйста, введите email', 'error');
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                showMessage(msgDiv, 'Пожалуйста, введите корректный email', 'error');
+                return;
+            }
+            
+            // Блокируем кнопку
+            btn.disabled = true;
+            btn.textContent = 'Отправка...';
+            
+            try {
+                // Создаём FormData
+                const formData = new FormData();
+                formData.append('email', email);
+                
+                // Отправляем запрос
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage(msgDiv, '✅ ' + (data.message || 'Подписка оформлена!'), 'success');
+                    document.getElementById('subscribe-email').value = '';
+                    console.log('✅ Подписка успешна:', email);
+                } else {
+                    const errorMsg = data.detail || data.message || 'Ошибка подписки';
+                    showMessage(msgDiv, '❌ ' + errorMsg, 'error');
+                    console.error('❌ Ошибка сервера:', data);
+                }
+                
+            } catch (error) {
+                console.error('❌ Ошибка сети:', error);
+                showMessage(msgDiv, '❌ Ошибка соединения с сервером', 'error');
+                
+            } finally {
+                // Разблокируем кнопку
+                btn.disabled = false;
+                btn.textContent = 'Подписаться';
+            }
+        });
+        
+        // Также разрешаем отправку по Enter
+        document.getElementById('subscribe-email').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('subscribe-btn').click();
+            }
+        });
+    }
+    
+    function showMessage(element, text, type) {
+        element.textContent = text;
+        element.style.display = 'block';
+        element.style.padding = '12px 20px';
+        element.style.borderRadius = '10px';
+        element.style.fontWeight = '500';
+        
+        if (type === 'success') {
+            element.style.backgroundColor = '#d4edda';
+            element.style.color = '#155724';
+            element.style.border = '1px solid #c3e6cb';
+        } else {
+            element.style.backgroundColor = '#f8d7da';
+            element.style.color = '#721c24';
+            element.style.border = '1px solid #f5c6cb';
+        }
+        
+        setTimeout(() => {
+            element.style.display = 'none';
+        }, 5000);
+    }
+    
+})();
+</script>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="row d-flex flex-wrap justify-content-between">
+          
+          <div class="col-lg-3 col-md-6 pb-3">
+            <div class="footer-menu">
+              <img src="/static/images/main-logo.png" alt="logo" class="pb-3" style="height: 40px; filter: brightness(0) invert(1);">
+              <p>Профессиональная подготовка к ЕГЭ и ОГЭ по математике.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 pb-3">
+            <div class="footer-menu">
+              <h5 class="widget-title pb-2 fs-5">Навигация</h5>
+              <ul class="list-unstyled">
+                <li class="pb-2"><a href="#">Главная</a></li>
+                <li class="pb-2"><a href="#about-us">Обо мне</a></li>
+                <li class="pb-2"><a href="#featured-products">Программы</a></li>
+                <li class="pb-2"><a href="#testimonials">Отзывы</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 pb-3">
+    <div class="footer-menu">
+        <h5 class="widget-title pb-2 fs-5">Соцсети</h5>
+        <ul class="list-unstyled">
+            <li class="pb-2">
+                <a href="https://t.me/mathacademia" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.22-.02-.09.02-1.6 1.02-4.52 2.99-.43.29-.82.44-1.17.43-.38-.01-1.12-.22-1.67-.4-.67-.22-1.2-.33-1.16-.7.03-.19.29-.38.79-.58 3.06-1.33 5.1-2.21 6.11-2.64 2.91-1.21 3.51-1.42 3.9-1.43h.03c.2 0 .58.04.84.28.22.19.28.45.31.63.03.18.04.38.02.59z"/>
+                    </svg>
+                    Telegram
+                </a>
+            </li>
+            <li class="pb-2">
+                <a href="https://vk.com/your_vk_username" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.5 12.67c-.26.72-.76.72-1.37.56-.9-.25-1.42-.9-2.2-1.5-.2-.15-.1-.23.07-.41.52-.48 1.04-1.03 1.38-1.73.2-.42-.11-.42-.44-.29-1.06.43-2.08.79-3.07 1.14-.5.17-.93.31-1.24.07-.38-.3.02-.77.27-1.1.14-.17 1.1-1.06 1.7-1.68.9-.95 1.44-1.87 1.65-2.53.18-.57-.1-.77-.58-.62-1.57.5-3.08 1.1-4.13 1.63-.53.27-1.05.4-1.2-.08-.17-.5.33-1.03.82-1.48.56-.53 1.25-1.07 1.93-1.55 2.12-1.48 4.13-2.55 6.05-2.7 1.12-.09 1.73.43 1.6 1.55-.15 1.23-.54 2.53-1.05 3.78-.23.55-.55 1.07-.9 1.55-.3.4-.34.65-.08.9.23.23.6.55.95.9.6.6 1.18 1.25 1.57 1.97.3.55.37 1.08-.05 1.22z"/>
+                    </svg>
+                    ВКонтакте
+                </a>
+            </li>
+            <li class="pb-2">
+                <a href="https://www.youtube.com/@Academia-math" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.5.6c-1 .3-1.7 1.1-2 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1 1.8 2 2.1 1.8.6 9.5.6 9.5.6s7.7 0 9.5-.6c1-.3 1.7-1.1 2-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                    YouTube
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-menu">
+              <h5 class="widget-title pb-2 fs-5">Контакты</h5>
+              <p><a href="#">+7 (912) 012-85-05</a></p>
+              <p><a href="mailto:info@mathmentor.ru">info@mathacademia.ru</a></p>
+              <p>Санкт-петербург, онлайн по всему миру</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray border-top mt-4">
+      <div class="text-center py-4">
+        <p class="mb-0">© 2026 Академия Математики. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+<!-- Скрипт для обработки формы подписки -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const subscribeForm = document.getElementById('subscribe-form');
+    const messageDiv = document.getElementById('subscribe-message');
+    
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('subscribe-email');
+            const email = emailInput.value.trim();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            // Валидация
+            if (!email) {
+                showMessage('Введите email', 'red');
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                showMessage('Введите корректный email', 'red');
+                return;
+            }
+            
+            // Блокируем кнопку
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправка...';
+            
+            // Отправка на сервер
+            try {
+                const formData = new FormData();
+                formData.append('email', email);
+                
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage(data.message || '✅ Подписка оформлена!', '#28a745');
+                    emailInput.value = ''; // Очищаем поле
+                } else {
+                    showMessage(data.message || '❌ Ошибка подписки', 'red');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                showMessage('❌ Ошибка соединения с сервером', 'red');
+            } finally {
+                // Разблокируем кнопку
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Подписаться';
+            }
+        });
+    }
+    
+    function showMessage(text, color) {
+        if (!messageDiv) return;
+        
+        messageDiv.textContent = text;
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = color;
+        messageDiv.style.padding = '10px';
+        messageDiv.style.borderRadius = '5px';
+        messageDiv.style.backgroundColor = color === 'red' ? '#ffe6e6' : '#e6ffe6';
+        
+        // Скрываем через 5 секунд
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    }
+});
+</script>
+
+  <script src="/static/js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/static/js/plugins.js"></script>
+  <script type="text/javascript" src="/static/js/script.js"></script>
+
+
+  <!-- Модальное окно записи -->
+<div class="modal fade" id="orderModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Запись на пробный урок</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="order-form">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="order-name" placeholder="Ваше имя" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="order-email" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="order-phone" placeholder="Телефон" required>
+          </div>
+          <div class="mb-3">
+            <select class="form-control" id="order-program" required>
+              <option value="">Выберите программу</option>
+              <option value="ОГЭ">Подготовка к ОГЭ</option>
+              <option value="ЕГЭ">Подготовка к ЕГЭ</option>
+              <option value="Онлайн">Онлайн занятия</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <input type="date" class="form-control" id="order-date">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="order-comment" rows="3" placeholder="Комментарий"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
