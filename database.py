@@ -1,23 +1,25 @@
 import os
-from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
+from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import func
-from dotenv import load_dotenv
 
-load_dotenv()
-
-# Подключение к БД
+# Получаем URL из переменной окружения
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
-# Для Render (замена postgres:// на postgresql://)
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
-
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-Base = declarative_base()
+# Если переменная не задана — не падаем, а выводим предупреждение
+if not DATABASE_URL:
+    print("⚠️ DATABASE_URL не задана! Работаем без базы данных.")
+    engine = None
+    SessionLocal = None
+    Base = None
+else:
+    # Исправляем URL для SQLAlchemy
+    if DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    
+    engine = create_engine(DATABASE_URL)
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    Base = declarative_base()()
 
 
 # ==================== Модели ====================
